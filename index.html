@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resultado</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #0f172a; /* Color de fondo (Azul oscuro) */
+      color: #38bdf8; /* Color de texto (Azul claro brillante) */
+      font-family: system-ui, sans-serif;
+      font-size: 22vw; /* Tamaño gigante adaptable al celular */
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div id="resultado"></div>
+
+  <script>
+    const hoy = new Date();
+    const dia = hoy.getDate();
+    const mes = hoy.getMonth() + 1;
+    const anio = hoy.getFullYear();
+
+    // Fórmula: (Día * 100) + Mes + Año + 3891
+    const total = (dia * 100) + mes + anio + 3891;
+    document.getElementById('resultado').innerText = total;
+  </script>
+</body>
+</html>
